@@ -29,6 +29,9 @@ class Personne
 public:
 	Personne(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse);
 
+	virtual ~Personne();
+	virtual Personne* clone() const =0;
+
 	const std::string reqNas() const;
 	const std::string reqPrenom() const;
 	const std::string reqNom() const;
@@ -39,7 +42,7 @@ public:
 
 	bool operator ==(const Personne& other) const;
 
-	std::string reqPersonneFormate() const;
+	virtual std::string reqPersonneFormate() const = 0;
 
 	void asgAdresse(const util::Adresse& adresse);
 

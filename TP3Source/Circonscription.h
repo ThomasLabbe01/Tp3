@@ -8,7 +8,10 @@
 #ifndef CIRCONSCRIPTION_H_
 #define CIRCONSCRIPTION_H_
 
+namespace elections
+{
 
+}  // namespace elections
 
 
 

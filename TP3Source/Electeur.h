@@ -8,7 +8,10 @@
 #ifndef ELECTEUR_H_
 #define ELECTEUR_H_
 
+namespace elections
+{
 
+}  // namespace elections
 
 
 

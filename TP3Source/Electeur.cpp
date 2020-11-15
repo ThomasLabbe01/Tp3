@@ -5,6 +5,15 @@
  *      Author: etudiant
  */
 
+#include "Electeur.h"
+#include <sstream>
+
+using namespace std;
+
+namespace elections
+{
+
+} //namespace elections
 
 
 

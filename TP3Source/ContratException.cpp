@@ -5,7 +5,6 @@
  */
 #include "ContratException.h"
 #include <sstream>
-#include <stdexcept>
 
 
 using namespace std;

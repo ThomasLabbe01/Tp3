@@ -8,7 +8,10 @@
 #ifndef CANDIDAT_H_
 #define CANDIDAT_H_
 
+namespace elections
+{
 
+}  // namespace elections
 
 
 

@@ -5,6 +5,14 @@
  *      Author: etudiant
  */
 
+#include "Circonscription.h"
+#include <sstream>
 
+using namespace std;
+
+namespace elections
+{
+
+} //namespace elections
 
 
