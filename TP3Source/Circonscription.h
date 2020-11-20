@@ -8,11 +8,15 @@
 #ifndef CIRCONSCRIPTION_H_
 #define CIRCONSCRIPTION_H_
 #include "Candidat.h"
+#include "Personne.h"
+#include "Electeur.h"
 #include <vector>
 
 
 namespace elections
 {
+/*
+
 
 class Circonscription
 {
@@ -24,9 +28,12 @@ public:
 	const Candidat reqDeputeElu() const;
 	const std::string reqCirconscriptionFormate() const;
 
-	const std::string& operator= (const std::string& p_nomCirconscription);
 
 	void inscrire(const Personne& p_nouvelInscrit);
+
+	const std::string& operator= (const std::string& p_nomCirconscription);
+
+
 
 private:
 	std::string m_nomCirconscription;
@@ -34,10 +41,12 @@ private:
 	std::vector<Personne*> m_vInscrits;
 
 
+
 }; // class Circonscription
 
-}  // namespace elections
+*/
 
+}  // namespace elections
 
 
 #endif /* CIRCONSCRIPTION_H_ */

@@ -6,6 +6,7 @@
  */
 
 #include "Adresse.h"
+#include "ContratException.h"
 #include <sstream>
 
 using namespace std;

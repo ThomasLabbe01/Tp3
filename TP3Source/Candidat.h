@@ -22,7 +22,7 @@ public:
 
 	Candidat(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse, const int p_partiPolitique);
 
-	//const int reqPartiPolitique() const;
+	const std::string reqPartiPolitique() const;
 
 	enum PartisPolitiques {BLOC_QUEBECOIS, CONSERVATEUR, INDEPENDANT, LIBERAL,
 	NOUVEAU_PARTI_DEMOCRATIQUE};  //PartisPolitiques p = m_partiPolitique

@@ -6,6 +6,11 @@
  */
 
 #include "Circonscription.h"
+#include "Candidat.h"
+#include "Personne.h"
+#include "Electeur.h"
+#include "ContratException.h"
+
 #include <sstream>
 #include <vector>
 
@@ -14,37 +19,46 @@ using namespace std;
 
 namespace elections
 {
+
 /*
 
 
 Circonscription::Circonscription(std::string p_nomCirconscription, Candidat p_deputeElu)
 : m_nomCirconscription(p_nomCirconscription), m_deputeElu(p_deputeElu)
 {
-	m_vInscrits = new vector[m_vInscrits.size()+1]; // Allocation dynamique
-	strcpy(m_vInscrit, p_); // Copie de p_strP dans m_strP
+	 std::vector<Personne*> m_vInscrits;
 }
 
 
 Circonscription::~Circonscription()
 {
-delete[] m_vInscrits;
+	m_vInscrits.clear();
+
 }
- */
+
 
 const string Circonscription::reqNomCirconscription() const
 {
 	return m_nomCirconscription;
 }
 
+
 const Candidat Circonscription::reqDeputeElu() const
 {
-	return m_deputeElu;
+	return m_deputeElu.reqPersonneFormate();
 }
 
-/*
+
 const std::string Circonscription::reqCirconscriptionFormate() const
 {
+	std::ostringstream info_circonscription;
+	info_circonscription << "circonscription : " << reqNomCirconscription() << endl;
+	info_circonscription << "Depute sortant : " << reqDeputeElu() << endl;
+	info_circonscription << "Liste des inscrits : " << endl;
 
+	//for
+
+	return info_circonscription.str();
 }
 
 
@@ -52,21 +66,22 @@ const std::string& Circonscription::operator= (const std::string& p_nomCirconscr
 {
 	if (this != & p_nomCirconscription)
 	{
-		delete [] m_nomCirconscription;
-		m_strP = new char[strlen(p_chaine.m_strP)+1];
-		strcpy(m_strP, p_chaine.m_strP);
+		m_vInscrits.clear();
+		m_vInscrits = std::vector<Personne*> ;
+		m_vInscrits.assign(p_nomCirconscription.begin(), p_nomCirconscription.end());
+
 	}
 	return *this;
 }
-*/
+
 
 void Circonscription::inscrire(const Personne& p_nouvelInscrit)
 {
 	m_vInscrits.push_back(p_nouvelInscrit.clone());
 }
 
+*/
 
 
 } //namespace elections
-
 

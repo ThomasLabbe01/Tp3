@@ -6,6 +6,7 @@
  */
 
 #include "Candidat.h"
+#include "ContratException.h"
 #include <sstream>
 #include <string>
 
@@ -20,38 +21,38 @@ Candidat::Candidat(const std::string p_nas,const std::string p_prenom,const std:
 
 }
 
-/*
-const int Candidat::reqPartiPolitique() const
+
+const std::string Candidat::reqPartiPolitique() const
 {
-	return m_partiPolitique;
+	std:: string partipolitique;
+	int parti = m_partiPolitique;
+	switch (parti)
+	{
+	case 0 :
+		partipolitique = "Bloc quebecois";
+		break;
+	case 1 :
+		partipolitique = "Conservateur";
+		break;
+	case 2 :
+		partipolitique = "Independant";
+		break;
+	case 3 :
+		partipolitique = "Liberal";
+		break;
+	case 4 :
+		partipolitique = "Nouveau parti democratique";
+		break;
+	}
+	return partipolitique;
 }
-*/
+
 string Candidat::reqPersonneFormate() const
 {
 	std::ostringstream info_candidat;
 	info_candidat << "Candidat" << endl;
 	info_candidat << Personne::reqPersonneFormate();
-	info_candidat << "Parti politique :	 ";
-
-	int parti = m_partiPolitique;
-	switch (parti)
-	{
-	case 0 :
-		info_candidat << "Bloc quebecois"<< endl;
-		break;
-	case 1 :
-		info_candidat << "Conservateur" << endl;
-		break;
-	case 2 :
-		info_candidat << "Independant" << endl;
-		break;
-	case 3 :
-		info_candidat << "Liberal" << endl;
-		break;
-	case 4 :
-		info_candidat << "Nouveau parti democratique" << endl;
-		break;
-	}
+	info_candidat << "Parti politique :	 " << reqPartiPolitique() << endl;
 
 	return info_candidat.str();
 }

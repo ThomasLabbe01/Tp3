@@ -2,10 +2,11 @@
  * \file ContratException.cpp
  * \brief Implantation de la classe ContratException et de ses héritiers
  * \author administrateur
+ * \date 16 janvier 2014
+ * \version révisée balises Doxygen C++ normes H2014
  */
 #include "ContratException.h"
 #include <sstream>
-
 
 using namespace std;
 /**
@@ -16,7 +17,8 @@ using namespace std;
  * \param p_exprP Test logique qui a échoué
  */
 ContratException::ContratException(std::string p_fichP, unsigned int p_prmLigne,
-		std::string p_exprP, std::string p_msgP) : logic_error(p_msgP), m_expression(p_exprP), m_fichier(p_fichP), m_ligne(p_prmLigne)
+		std::string p_exprP, std::string p_msgP) :
+	logic_error(p_msgP), m_expression(p_exprP), m_fichier(p_fichP), m_ligne(p_prmLigne)
 {
 }
 /**

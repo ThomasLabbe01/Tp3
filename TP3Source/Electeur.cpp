@@ -8,6 +8,8 @@
 #include "Electeur.h"
 #include <sstream>
 #include <string>
+#include "ContratException.h"
+
 
 using namespace std;
 

@@ -9,6 +9,8 @@
 #include "Personne.h"
 #include "Adresse.h"
 #include "Date.h"
+#include "ContratException.h"
+
 
 using namespace std;
 using namespace util;
