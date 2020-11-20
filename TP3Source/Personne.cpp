@@ -75,6 +75,7 @@ const Adresse Personne::reqAdresse() const
 string Personne::reqPersonneFormate() const
 {
 	std::ostringstream info_personne;
+	info_personne << "----------------------------------------------" << endl;
 	info_personne << "NAS               : " << m_nas << endl;
 	info_personne << "Prenom            : " << m_prenom << endl;
 	info_personne << "Nom               : " << m_nom << endl;
