@@ -40,6 +40,7 @@ int main()
 	Electeur electeurtest(nas, prenom, nom, date, adresse);
 	Candidat candidattest(nas, prenom, nom, date, adresse, 0);
 
-	cout << candidattest.BLOC_QUEBECOIS << endl;
+	cout << candidattest.reqPersonneFormate() << endl;
+
 	return 0;
 }
