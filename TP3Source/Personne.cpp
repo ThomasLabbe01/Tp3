@@ -28,6 +28,11 @@ Personne::Personne(const std::string p_nas,const std::string p_prenom,const std:
 {
 
 }
+
+Personne::~Personne()
+{
+}
+
 /**
  * \brief retourne le numéro correspondant au numéro d'assurance social
  * \return un string qui représente le numéro d'assurance social de la personne

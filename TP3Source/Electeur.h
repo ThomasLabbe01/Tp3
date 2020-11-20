@@ -15,7 +15,7 @@
 namespace elections
 {
 
-class Electeur : public elections::Personne
+class Electeur : public Personne
 {
 
 public:

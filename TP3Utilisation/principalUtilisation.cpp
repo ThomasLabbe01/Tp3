@@ -8,6 +8,10 @@
 #include "Date.h"
 #include "Personne.h"
 #include "Adresse.h"
+#include "Circonscription.h"
+#include "Electeur.h"
+#include "Candidat.h"
+
 #include <iostream>
 #include <string>
 
@@ -19,6 +23,23 @@ using namespace elections;
 
 int main()
 {
-	cout << "Its a great success" << endl;
+	long jour = 1;
+	long mois = 2;
+	long anne = 1980;
+	const int norue = 6;
+	const string nomrue = "rue";
+	const string ville = "ville";
+	const string codepostal = "code postal";
+	const string province = "province";
+	const string nom = "nom";
+	const string prenom = "prenom";
+	const string nas =  "640 454 286";
+	Date date(jour, mois, anne);
+	Adresse adresse(norue, nomrue, ville, codepostal, province);
+
+	Electeur electeurtest(nas, prenom, nom, date, adresse);
+	Candidat candidattest(nas, prenom, nom, date, adresse, 0);
+
+	cout << candidattest.BLOC_QUEBECOIS << endl;
 	return 0;
 }

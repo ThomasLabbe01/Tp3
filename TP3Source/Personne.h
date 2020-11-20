@@ -29,7 +29,7 @@ class Personne
 public:
 	Personne(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse);
 
-	virtual ~Personne();
+	virtual ~Personne() = 0;
 	virtual Personne* clone() const =0;
 
 	const std::string reqNas() const;
