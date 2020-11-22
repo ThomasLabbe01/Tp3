@@ -39,7 +39,20 @@ int main()
 	Electeur electeurtest(nas, prenom, nom, date, adresse);
 	Candidat candidattest(nas, prenom, nom, date, adresse, 0);
 
-	cout << candidattest.reqPersonneFormate() << endl;
+	Circonscription testcir("Circonscription1", candidattest);
+
+	cout << "test" << endl;
+	cout << testcir.reqNomCirconscription() << endl;
+	cout << testcir.reqDeputeElu() << endl;
+	cout << testcir.reqCirconscriptionFormate() << endl;
+
+	cout << "inscription electeur" << endl;
+	//testcir.inscrire(electeurtest);
+
+	//cout << testcir.reqCirconscriptionFormate() << endl;
+
+
+
 
 	return 0;
 }

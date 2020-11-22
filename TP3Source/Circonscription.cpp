@@ -47,7 +47,10 @@ const std::string Circonscription::reqCirconscriptionFormate() const
 	info_circonscription << "Depute sortant : " << reqDeputeElu() << endl;
 	info_circonscription << "Liste des inscrits : " << endl;
 
-	//for
+	for (int i = 0; i <= (int)m_vInscrits.size(); i++)
+	{
+		info_circonscription << m_vInscrits[i]->reqPersonneFormate() << endl;
+	}
 
 	return info_circonscription.str();
 }
@@ -62,7 +65,7 @@ Circonscription::~Circonscription()
 	m_vInscrits.clear();
 }
 
-Circonscription::Circonscription(const Circonscription& p_otherCirconscription) : m_nomCirconscription(p_otherCirconscription.m_nomCirconscription)
+Circonscription::Circonscription(const Circonscription& p_otherCirconscription) : m_nomCirconscription(p_otherCirconscription.reqNomCirconscription()), m_deputeElu(p_otherCirconscription.m_deputeElu)
 {
 	copy(p_otherCirconscription.m_vInscrits.begin(), p_otherCirconscription.m_vInscrits.end(), back_inserter(m_vInscrits));
 }
