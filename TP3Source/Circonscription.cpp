@@ -20,19 +20,10 @@ using namespace std;
 namespace elections
 {
 
-/*
-
 
 Circonscription::Circonscription(std::string p_nomCirconscription, Candidat p_deputeElu)
 : m_nomCirconscription(p_nomCirconscription), m_deputeElu(p_deputeElu)
 {
-	 std::vector<Personne*> m_vInscrits;
-}
-
-
-Circonscription::~Circonscription()
-{
-	m_vInscrits.clear();
 
 }
 
@@ -43,7 +34,7 @@ const string Circonscription::reqNomCirconscription() const
 }
 
 
-const Candidat Circonscription::reqDeputeElu() const
+const std::string Circonscription::reqDeputeElu() const
 {
 	return m_deputeElu.reqPersonneFormate();
 }
@@ -61,26 +52,40 @@ const std::string Circonscription::reqCirconscriptionFormate() const
 	return info_circonscription.str();
 }
 
-
-const std::string& Circonscription::operator= (const std::string& p_nomCirconscription)
-{
-	if (this != & p_nomCirconscription)
-	{
-		m_vInscrits.clear();
-		m_vInscrits = std::vector<Personne*> ;
-		m_vInscrits.assign(p_nomCirconscription.begin(), p_nomCirconscription.end());
-
-	}
-	return *this;
-}
-
-
 void Circonscription::inscrire(const Personne& p_nouvelInscrit)
 {
 	m_vInscrits.push_back(p_nouvelInscrit.clone());
 }
 
-*/
+Circonscription::~Circonscription()
+{
+	m_vInscrits.clear();
+}
+
+Circonscription::Circonscription(const Circonscription& p_otherCirconscription) : m_nomCirconscription(p_otherCirconscription.m_nomCirconscription)
+{
+	copy(p_otherCirconscription.m_vInscrits.begin(), p_otherCirconscription.m_vInscrits.end(), back_inserter(m_vInscrits));
+}
+
+const Circonscription& Circonscription::operator= (const Circonscription& p_otherCirconscription)
+{
+	if (this != & p_otherCirconscription)
+	{
+		m_vInscrits.clear();
+		m_nomCirconscription = p_otherCirconscription.m_nomCirconscription;
+		copy(p_otherCirconscription.m_vInscrits.begin(), p_otherCirconscription.m_vInscrits.end(), back_inserter(m_vInscrits));
+	}
+	return *this;
+}
+
+
+void Circonscription::verifieInvariant() const
+{
+
+}
+
+
+
 
 
 } //namespace elections

@@ -15,36 +15,35 @@
 
 namespace elections
 {
-/*
 
 
 class Circonscription
 {
 public:
 	Circonscription(std::string p_nomCirconscription, Candidat m_deputeElu);
-	~ Circonscription ();
+	Circonscription(const Circonscription& p_otherCirconscription);
 
 	const std::string reqNomCirconscription() const;
-	const Candidat reqDeputeElu() const;
+	const std::string reqDeputeElu() const;
 	const std::string reqCirconscriptionFormate() const;
-
 
 	void inscrire(const Personne& p_nouvelInscrit);
 
-	const std::string& operator= (const std::string& p_nomCirconscription);
-
-
+	~ Circonscription ();
+	const Circonscription& operator= (const Circonscription& p_otherCirconscription);
 
 private:
 	std::string m_nomCirconscription;
 	Candidat m_deputeElu;
 	std::vector<Personne*> m_vInscrits;
 
+	void verifieInvariant() const;
+
+
 
 
 }; // class Circonscription
 
-*/
 
 }  // namespace elections
 

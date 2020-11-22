@@ -62,6 +62,10 @@ Personne* Candidat::clone() const
 	return new Candidat(*this);
 }
 
+void Candidat::verifieInvariant() const
+{
+
+}
 
 } //namespace elections
 

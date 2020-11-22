@@ -5,6 +5,8 @@
  *      Author: etudiant
  */
 
+#include<gtest/gtest.h>
+#include "Candidat.h"
 
-
+using namespace elections;
 

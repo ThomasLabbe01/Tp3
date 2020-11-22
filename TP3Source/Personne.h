@@ -54,6 +54,9 @@ private:
 	util::Date m_dateNaissance;
 	util::Adresse m_adresse;
 
+	void verifieInvariant() const;
+
+
 };  // class Personne
 
 }  // namespace util

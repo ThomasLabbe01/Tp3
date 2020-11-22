@@ -34,6 +34,9 @@ public:
 private:
 	int m_partiPolitique;
 
+	void verifieInvariant() const;
+
+
 }; // class Candidat
 
 }  // namespace elections

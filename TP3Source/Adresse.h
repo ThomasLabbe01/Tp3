@@ -47,6 +47,9 @@ private:
 	std::string m_codePostal;
 	std::string m_province;
 
+	void verifieInvariant() const;
+
+
 
 
 };  // class Adresse

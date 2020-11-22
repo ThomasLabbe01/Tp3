@@ -25,6 +25,10 @@ public:
 	virtual std::string reqPersonneFormate() const;
 	virtual Personne* clone() const;
 
+private:
+	void verifieInvariant() const;
+
+
 
 }; // class Electeur
 

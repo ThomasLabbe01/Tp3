@@ -5,21 +5,10 @@
  *      Author: etudiant
  */
 
+#include<gtest/gtest.h>
+#include "Adresse.h"
+
+using namespace util;
 
 
-
-//============================================================================
-// Name        : CandidatTesteur.cpp
-// Author      : ThomasLabbe
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
-#include <iostream>
-using namespace std;
-
-int main() {
-	cout << "!!!Hello World2!!!" << endl; // prints !!!Hello World!!!
-	return 0;
-}
+//Le numéro civique doit être positif, les autres attributs seront non vides.

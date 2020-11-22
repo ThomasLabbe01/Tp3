@@ -116,5 +116,10 @@ ostream& operator<<(ostream& stream, const Adresse& p_adresse)
 	return stream;
 };
 
+void Adresse::verifieInvariant() const
+{
+
+}
+
 }  // namespace util
 

@@ -104,4 +104,9 @@ void asgAdresse(const util::Adresse& adresse)
 	util::Adresse m_adresse = adresse;
 }
 
+void Personne::verifieInvariant() const
+{
+
+}
+
 }  // namespace elections

@@ -35,6 +35,11 @@ Personne* Electeur::clone() const
 	return new Electeur(*this);
 }
 
+void Electeur::verifieInvariant() const
+{
+
+}
+
 
 } //namespace elections
 
