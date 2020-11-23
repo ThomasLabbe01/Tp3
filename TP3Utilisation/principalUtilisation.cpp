@@ -13,6 +13,7 @@
 #include "Candidat.h"
 
 #include <iostream>
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -39,19 +40,23 @@ int main()
 	Electeur electeurtest(nas, prenom, nom, date, adresse);
 	Candidat candidattest(nas, prenom, nom, date, adresse, 0);
 
+
 	Circonscription testcir("Circonscription1", candidattest);
+	testcir.inscrire(electeurtest);
+	testcir.inscrire(electeurtest);
 
 	cout << "test" << endl;
 	cout << testcir.reqNomCirconscription() << endl;
 	cout << testcir.reqDeputeElu() << endl;
-	cout << testcir.reqCirconscriptionFormate() << endl;
-
-	cout << "inscription electeur" << endl;
-	//testcir.inscrire(electeurtest);
-
 	//cout << testcir.reqCirconscriptionFormate() << endl;
 
+	cout << "inscription electeur" << endl;
+	cout << "test" << endl;
 
+
+	cout << testcir.reqCirconscriptionFormate() << endl;
+
+	cout << "IT WORKS!!!!" << endl;
 
 
 	return 0;

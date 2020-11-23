@@ -40,17 +40,22 @@ const std::string Circonscription::reqDeputeElu() const
 }
 
 
-const std::string Circonscription::reqCirconscriptionFormate() const
+std::string Circonscription::reqCirconscriptionFormate()
 {
 	std::ostringstream info_circonscription;
 	info_circonscription << "circonscription : " << reqNomCirconscription() << endl;
 	info_circonscription << "Depute sortant : " << reqDeputeElu() << endl;
 	info_circonscription << "Liste des inscrits : " << endl;
 
-	for (int i = 0; i <= (int)m_vInscrits.size(); i++)
+	//info_circonscription << (int)m_vInscrits.size() << endl;
+
+	std::vector<Personne*>::iterator iter;
+
+	for (iter =m_vInscrits.begin(); iter != m_vInscrits.end(); ++iter)
 	{
-		info_circonscription << m_vInscrits[i]->reqPersonneFormate() << endl;
+		info_circonscription << (*iter)->reqPersonneFormate() << endl;
 	}
+
 
 	return info_circonscription.str();
 }
