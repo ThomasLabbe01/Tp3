@@ -48,7 +48,6 @@ int main()
 	cout << "test" << endl;
 	cout << testcir.reqNomCirconscription() << endl;
 	cout << testcir.reqDeputeElu() << endl;
-	//cout << testcir.reqCirconscriptionFormate() << endl;
 
 	cout << "inscription electeur" << endl;
 	cout << "test" << endl;
@@ -57,6 +56,13 @@ int main()
 	cout << testcir.reqCirconscriptionFormate() << endl;
 
 	cout << "IT WORKS!!!!" << endl;
+
+	Circonscription c1(testcir);
+
+	c1 = testcir;
+
+
+
 
 
 	return 0;

@@ -25,7 +25,7 @@ public:
 
 	const std::string reqNomCirconscription() const;
 	const std::string reqDeputeElu() const;
-	std::string reqCirconscriptionFormate();
+	const std::string reqCirconscriptionFormate();
 
 	void inscrire(const Personne& p_nouvelInscrit);
 

@@ -40,7 +40,7 @@ const std::string Circonscription::reqDeputeElu() const
 }
 
 
-std::string Circonscription::reqCirconscriptionFormate()
+const std::string Circonscription::reqCirconscriptionFormate()
 {
 	std::ostringstream info_circonscription;
 	info_circonscription << "circonscription : " << reqNomCirconscription() << endl;
@@ -56,7 +56,6 @@ std::string Circonscription::reqCirconscriptionFormate()
 		info_circonscription << (*iter)->reqPersonneFormate() << endl;
 	}
 
-
 	return info_circonscription.str();
 }
 
@@ -67,7 +66,7 @@ void Circonscription::inscrire(const Personne& p_nouvelInscrit)
 
 Circonscription::~Circonscription()
 {
-	m_vInscrits.clear();
+	// refaire avec delete or some shit
 }
 
 Circonscription::Circonscription(const Circonscription& p_otherCirconscription) : m_nomCirconscription(p_otherCirconscription.reqNomCirconscription()), m_deputeElu(p_otherCirconscription.m_deputeElu)
