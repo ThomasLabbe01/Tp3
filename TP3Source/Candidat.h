@@ -1,9 +1,10 @@
-/*
- * Candidat.h
- *
- *  Created on: 2020-11-11
- *      Author: etudiant
+/**
+ * \file Candidat.h
+ * \brief Fichier qui contient l'interface de la classe Candidat qui sert au maintien et à la manipulation des candidats.
+ * \author Thomas Labbe
+ * \version 1.0
  */
+
 
 #ifndef CANDIDAT_H_
 #define CANDIDAT_H_
@@ -15,6 +16,15 @@
 
 namespace elections
 {
+/**
+ * \class Candidat
+ * \brief Cette classe sert au maintien et à la manipulation des candidats
+ *
+ *              Cette classe hérite de la classe personne
+ *
+ *              Attributs:   m_partiPolitique  nom du parti politique du candidat
+ *
+ */
 class Candidat : public elections::Personne
 {
 

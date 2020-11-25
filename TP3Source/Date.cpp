@@ -244,7 +244,6 @@ bool Date::validerDate(long p_jour, long p_mois, long p_annee)
 	}
 	return valide;
 }
-
 /**
  * \brief surcharge de l'opérateur ==
  * \param[in] p_date à comparer à la date courante

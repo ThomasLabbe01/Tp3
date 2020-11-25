@@ -1,6 +1,6 @@
 /**
  * \file Personne.cpp
- * \brief Implantation de la classe Date
+ * \brief Implantation de la classe Personne
  * \author Thomas Labbe
  * \version 1.0 sans contrat
  */
