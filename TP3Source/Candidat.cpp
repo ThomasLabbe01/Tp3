@@ -27,7 +27,13 @@ namespace elections
 Candidat::Candidat(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const util::Adresse& p_adresse, const int& p_partiPolitique)
 : elections::Personne(p_nas, p_prenom, p_nom, p_dateNaissance, p_adresse), m_partiPolitique(p_partiPolitique)
 {
-
+	POSTCONDITION (reqNas() == p_nas);
+	POSTCONDITION (reqPrenom() == p_prenom);
+	POSTCONDITION (reqNom() == p_nom);
+	POSTCONDITION (reqDateNaissance() == p_dateNaissance);
+	POSTCONDITION (reqAdresse() == p_adresse);
+	POSTCONDITION (reqPartiPolitique() == p_partiPolitique);
+	INVARIANTS();
 }
 /**
  * \brief retourne le parti Politique du candidat
@@ -83,7 +89,9 @@ Personne* Candidat::clone() const
  */
 void Candidat::verifieInvariant() const
 {
-
+	INVARIANT(m_partiPolitique >= 0 && m_partiPolitique <= 4)
+	INVARIANT(!m_prenom.empty());
+	INVARIANT(!m_nom.empty());
 }
 
 } //namespace elections

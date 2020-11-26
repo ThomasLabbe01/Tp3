@@ -20,7 +20,7 @@ using namespace util;
  * \brief Test du constructeur avec paramètres de Adresse::Adresse(int, string, string, string, string)
  *
  *    cas valide :
- *    	ConstructeurParDefaut: Création d'une adresse à l'aide du constructeur par défaut et vérifie attributs : ParametresValides
+ *    	Création d'une adresse à l'aide du constructeur et vérifie attributs : AdresseValide
  *
  *    cas invalide :
  *    	numero civic invalide : ParametreNumeroCivicInvalide
@@ -29,7 +29,7 @@ using namespace util;
  *      code postal invalide : ParametreCodePostalInvalide
  *      province invalide : AsgProvinceInvalide
  */
-TEST(Adresse, ParametresValides)
+TEST(Adresse, AdresseValide)
 {
 	Adresse adresseTest(93, "rue de l'Universite", "Quebec", "G1V 0A7", "QC");
 	ASSERT_EQ(93, adresseTest.reqNumeroCivic());
@@ -74,7 +74,10 @@ TEST(Adresse, ParametreProvinceInvalide)
 	<< "Le nom de la province est vide";
 }
 
-
+/**
+ * \class AdresseIntStringStringStringString
+ * \brief Fixture pour les tests sur une adresse
+ */
 class AdresseIntStringStringStringString: public::testing::Test // Une adresse(93, "rue de l'Universite", "Quebec", "G1V 0A7", "QC")
 {
 public:
@@ -139,12 +142,12 @@ TEST_F(AdresseIntStringStringStringString, reqProvince)
 }
 
 /**
- * \brief Test de la méthode int Adresse::reqAdresse()
- *        cas valide reqAdresse: Création adresse valide connue et test de son contenu
+ * \brief Test de la méthode int Adresse::reqAdresseFormate()
+ *        cas valide reqAdresseFormate: Création adresse valide connue et test de son contenu
  *        cas invalide Aucun d'identifié
  */
 
-TEST_F(AdresseIntStringStringStringString, reqAdresse)
+TEST_F(AdresseIntStringStringStringString, reqAdresseFormate)
 {
 	ASSERT_EQ("93, rue de l'Universite, Quebec, G1V 0A7, QC", f_adressetest.reqAdresseFormate());
 }
