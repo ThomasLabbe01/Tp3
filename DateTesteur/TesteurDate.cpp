@@ -59,7 +59,6 @@ TEST(Date, ParametresValides)
 // jour invalide
 TEST(Date, ParametreJourInvalide)
 {
-
 	ASSERT_THROW(Date d1(50,2,2011), PreconditionException);
 }
 // mois invalide

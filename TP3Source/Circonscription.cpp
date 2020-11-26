@@ -25,7 +25,7 @@ namespace elections
  * \param[in] p_nomCirconscription est un string qui représente le nom de la circonscription
  * \param[in] p_deputeElu est un objet Candidat qui représente le député sortant
  */
-Circonscription::Circonscription(std::string p_nomCirconscription, Candidat p_deputeElu)
+Circonscription::Circonscription(const std::string p_nomCirconscription,const Candidat p_deputeElu)
 : m_nomCirconscription(p_nomCirconscription), m_deputeElu(p_deputeElu)
 {
 

@@ -24,7 +24,7 @@ namespace elections
  * \param[in] p_dateNaissance est un objet Date qui représente la date de naisssance de l'électeur
  * \param[in] p_adresse est un objet Adresse qui représente l'adresse de l'électeur
  */
-Electeur::Electeur(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse)
+Electeur::Electeur(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const util::Adresse& p_adresse)
 : Personne(p_nas, p_prenom, p_nom, p_dateNaissance, p_adresse)
 {
 

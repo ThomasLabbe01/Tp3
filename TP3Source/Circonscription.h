@@ -28,7 +28,7 @@ namespace elections
 class Circonscription
 {
 public:
-	Circonscription(std::string p_nomCirconscription, Candidat m_deputeElu);
+	Circonscription(const std::string p_nomCirconscription,const Candidat m_deputeElu);
 
 	const std::string reqNomCirconscription() const;
 	const std::string reqDeputeElu() const;

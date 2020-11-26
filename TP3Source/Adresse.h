@@ -36,6 +36,8 @@ public:
 	void asgAdresse(const int p_numeroCivic,const std::string p_nomRue,const std::string p_ville,
 			const std::string p_codePostal,const std::string p_province);
 
+	const std::string reqAdresseFormate() const;
+
 	bool operator ==(const Adresse& other) const;
 
 	friend std::ostream& operator<<(std::ostream& p_os, const Adresse& p_adresse);

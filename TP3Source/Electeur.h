@@ -26,7 +26,7 @@ class Electeur : public Personne
 
 public:
 
-	Electeur(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse);
+	Electeur(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const util::Adresse& p_adresse);
 
 	virtual std::string reqPersonneFormate() const;
 	virtual Personne* clone() const;

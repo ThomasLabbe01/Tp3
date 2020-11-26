@@ -24,7 +24,7 @@ namespace elections
  * \param[in] p_adresse est un objet Adresse qui représente l'adresse du candidat
  * \param[in] p_partiPolitique est un objet int qui correspond au parti politique déclaré dans Candidat.h
  */
-Candidat::Candidat(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse, const int p_partiPolitique)
+Candidat::Candidat(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const util::Adresse& p_adresse, const int& p_partiPolitique)
 : elections::Personne(p_nas, p_prenom, p_nom, p_dateNaissance, p_adresse), m_partiPolitique(p_partiPolitique)
 {
 

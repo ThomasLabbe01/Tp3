@@ -25,7 +25,7 @@ namespace elections
  * \param[in] p_dateNaissance est un objet Date qui représente la date de naisssance de la personne
  * \param[in] p_adresse est un objet Adresse qui représente l'adresse de la personne
  */
-Personne::Personne(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const Adresse p_adresse)
+Personne::Personne(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const Adresse& p_adresse)
 : m_nas(p_nas), m_prenom(p_prenom), m_nom(p_nom), m_dateNaissance(p_dateNaissance), m_adresse(p_adresse)
 {
 
@@ -39,7 +39,7 @@ Personne::~Personne()
  * \brief retourne le numéro correspondant au numéro d'assurance social
  * \return un string qui représente le numéro d'assurance social de la personne
  */
-const string Personne::reqNas() const
+const string& Personne::reqNas() const
 {
 	return m_nas;
 }
@@ -47,7 +47,7 @@ const string Personne::reqNas() const
  * \brief retourne le prenom de la personne
  * \return un string qui représente le prénom de la personne
  */
-const string Personne::reqPrenom() const
+const string& Personne::reqPrenom() const
 {
 	return m_prenom;
 }
@@ -55,7 +55,7 @@ const string Personne::reqPrenom() const
  * \brief retourne le nom de la personne
  * \return un string qui représente le nom de la personne
  */
-const string Personne::reqNom() const
+const string& Personne::reqNom() const
 {
 	return m_nom;
 }
@@ -63,7 +63,7 @@ const string Personne::reqNom() const
  * \brief retourne la date de naissance de la personne
  * \return un objet Date qui représente la date de naissance de la personne
  */
-const Date Personne::reqDateNaissance() const
+const Date& Personne::reqDateNaissance() const
 {
 	return m_dateNaissance;
 }
@@ -71,7 +71,7 @@ const Date Personne::reqDateNaissance() const
  * \brief retourne l'adresse
  * \return un objet Adresse qui représente l'adresse de la personne
  */
-const Adresse Personne::reqAdresse() const
+const Adresse& Personne::reqAdresse() const
 {
 	return m_adresse;
 }

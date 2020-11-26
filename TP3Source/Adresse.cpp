@@ -24,7 +24,7 @@ namespace util
 Adresse::Adresse(const int& p_numeroCivic, const std::string& p_nomRue, const std::string& p_ville, const std::string& p_codePostal, const std::string& p_province)
 : m_numeroCivic(p_numeroCivic), m_nomRue(p_nomRue), m_ville(p_ville), m_codePostal(p_codePostal), m_province(p_province)
 {
-
+	INVARIANTS();
 }
 /**
  * \brief retourne le numéro correspondant au numéro civic
@@ -82,6 +82,18 @@ void Adresse::asgAdresse(const int p_numeroCivic,const std::string p_nomRue,cons
 	m_ville = p_ville;
 	m_codePostal = p_codePostal;
 	m_province = p_province;
+
+	INVARIANTS();
+}
+/**
+ * \brief retourne l'ensmble des éléments d'une adresse
+ * \return le numéro civic, le nom de la rue, le nom de la ville, le code postal et la nom de la province
+ */
+const std::string Adresse::reqAdresseFormate() const
+{
+	std::ostringstream adresseformat;
+	adresseformat << reqNumeroCivic() << ", " << reqNomRue() << ", " << reqVille() << ", " << reqCodePostal() << ", " << reqProvince();
+	return adresseformat.str();
 }
 /**
  * \brief surcharge de l'opérateur ==
@@ -118,7 +130,11 @@ ostream& operator<<(ostream& stream, const Adresse& p_adresse)
 
 void Adresse::verifieInvariant() const
 {
-
+	INVARIANT(m_numeroCivic > 0);
+	INVARIANT(!m_nomRue.empty());
+	INVARIANT(!m_ville.empty());
+	INVARIANT(!m_codePostal.empty());
+	INVARIANT(!m_province.empty());
 }
 
 }  // namespace util

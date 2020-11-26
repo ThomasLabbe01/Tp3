@@ -27,16 +27,16 @@ namespace elections
 class Personne
 {
 public:
-	Personne(const std::string p_nas,const std::string p_prenom,const std::string p_nom,const util::Date p_dateNaissance,const util::Adresse p_adresse);
+	Personne(const std::string& p_nas,const std::string& p_prenom,const std::string& p_nom,const util::Date& p_dateNaissance,const util::Adresse& p_adresse);
 
 	virtual ~Personne() = 0;
 	virtual Personne* clone() const =0;
 
-	const std::string reqNas() const;
-	const std::string reqPrenom() const;
-	const std::string reqNom() const;
-	const util::Date reqDateNaissance() const;
-	const util::Adresse reqAdresse() const;
+	const std::string& reqNas() const;
+	const std::string& reqPrenom() const;
+	const std::string& reqNom() const;
+	const util::Date& reqDateNaissance() const;
+	const util::Adresse& reqAdresse() const;
 
 	//void asgPersonne(std::string p_nas, std::string p_prenom, std::string p_nom, util::Date p_dateNaissance, util::Adresse p_adresse);
 
