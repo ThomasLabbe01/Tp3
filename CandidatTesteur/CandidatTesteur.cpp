@@ -50,19 +50,6 @@ TEST(Candidat, NASInvalide)
 		<< "Le numéro d'assurande social doit correspondre à celui du constructeur";
 }
 
-// prenom invalide
-TEST(Candidat, PrenomInvalide)
-{
-	ASSERT_THROW (Candidat candidatInvalide("1", "", "nom", util::Date(28, 11, 1998), util::Adresse(-1, "rue de l'Universite", "Quebec", "G1V 0A7", "QC"), 0), ContratException)
-		<< "Le prenom doit être une string non vide";
-}
-
-//nom invalide
-TEST(Candidat, NomInvalide)
-{
-	ASSERT_THROW (Candidat candidatInvalide("1", "prenom", "", util::Date(28, 11, 1998), util::Adresse(-1, "rue de l'Universite", "Quebec", "G1V 0A7", "QC"), 0), ContratException)
-		<< "Le nom doit être une string non vide";
-}
 
 //PartiPolitiqueInvalide
 TEST(Candidat, PartiPolitiqueInvalide)

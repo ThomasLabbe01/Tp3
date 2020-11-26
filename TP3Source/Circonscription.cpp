@@ -28,7 +28,7 @@ namespace elections
 Circonscription::Circonscription(const std::string p_nomCirconscription,const Candidat p_deputeElu)
 : m_nomCirconscription(p_nomCirconscription), m_deputeElu(p_deputeElu)
 {
-
+	INVARIANTS();
 }
 /**
  * \brief retourne le nom du député sortant de la circonscription
@@ -109,7 +109,7 @@ const Circonscription& Circonscription::operator= (const Circonscription& p_othe
  */
 void Circonscription::verifieInvariant() const
 {
-
+	INVARIANT(!m_nomCirconscription.empty());
 }
 
 

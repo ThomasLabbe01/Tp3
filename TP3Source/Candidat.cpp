@@ -32,7 +32,6 @@ Candidat::Candidat(const std::string& p_nas,const std::string& p_prenom,const st
 	POSTCONDITION (reqNom() == p_nom);
 	POSTCONDITION (reqDateNaissance() == p_dateNaissance);
 	POSTCONDITION (reqAdresse() == p_adresse);
-	POSTCONDITION (reqPartiPolitique() == p_partiPolitique);
 	INVARIANTS();
 }
 /**
@@ -90,8 +89,6 @@ Personne* Candidat::clone() const
 void Candidat::verifieInvariant() const
 {
 	INVARIANT(m_partiPolitique >= 0 && m_partiPolitique <= 4)
-	INVARIANT(!m_prenom.empty());
-	INVARIANT(!m_nom.empty());
 }
 
 } //namespace elections
